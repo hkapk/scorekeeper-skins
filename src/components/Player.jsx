@@ -1,16 +1,18 @@
 import React from "react";
 
-function Player({ player, index, removePlayer }) {
+function Player({ name, index, removePlayer }) {
     const removeHandle = i => {
         removePlayer(i);
     }
 
-    return
-    <div className='player-item'>
-        <button className='remove-item' onClick={() => removeHandle(index)
-        }> X </button>
-        <div className="score-item">Player: {player.player}</div>
-    </div>
+    return (
+
+        <div className='player-item'>
+            <button className='remove-item' onClick={() => removeHandle(index)
+            }> X </button>
+            <div className="player-item">Player: {name.playerName} </div>
+        </div>
+    )
 }
 
 export default Player;

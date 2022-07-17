@@ -1,11 +1,11 @@
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import React from "react";
 
-function Navbar() {
+function Navbar({ totalSkins }) {
     return (
         <AppBar position="static">
             <Toolbar>
-                <Typography>Skins Scores</Typography>
+                <Typography>Skins Scores #{totalSkins}</Typography>
             </Toolbar>
         </AppBar>
     )

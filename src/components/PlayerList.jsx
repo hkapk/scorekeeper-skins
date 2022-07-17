@@ -1,11 +1,25 @@
 import React from 'react';
 import Player from './Player';
 
-function PlayerList({ player, setPlayer }) {
+function PlayerList({ name, setPlayer }) {
+
+    const removePlayer = i => {
+        let temp = name.filter((v, index) => index != i);
+        setPlayer(temp);
+    }
+
+    const sortByDate = (a, b) => {
+        return a.date - b.date;
+    }
 
     return (
         <div className='player-list'>
-            Player
+            {
+                name.sort(sortByDate).map((value, index) => (
+                    <Player key={index} name={value} index={index}
+                        removePlayer={removePlayer} />
+                ))
+            }
         </div>
     )
 

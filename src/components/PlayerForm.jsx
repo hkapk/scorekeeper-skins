@@ -7,20 +7,24 @@ function PlayerForm({ name, setName }) {
     const addPlayer = e => {
         e.preventDefault();
 
+        console.log(playerName.current.value);
+
         setName([...name, {
             "playerName": playerName.current.value,
         }]);
 
-        playerName.current.value = "";
+        playerName.current.value = null;
+
     }
 
     return (
         <form className='player-form' onSubmit={addPlayer}>
             <div className='form-inner'>
-                <input type='text' name="playerName" id="playername"
+                <input type='text' name="playerName" id="playerName"
                     placeholder="Player Name..." ref={playerName} />
                 <input type='submit' value='+'></input>
             </div>
+
         </form>
     );
 
