@@ -7,8 +7,6 @@ function PlayerForm({ name, setName }) {
     const addPlayer = e => {
         e.preventDefault();
 
-        console.log(playerName.current.value);
-
         setName([...name, {
             "playerName": playerName.current.value,
         }]);

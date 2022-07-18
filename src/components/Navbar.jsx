@@ -4,8 +4,11 @@ import React from "react";
 function Navbar({ totalSkins }) {
     return (
         <AppBar position="static">
-            <Toolbar>
-                <Typography>Skins Scores #{totalSkins}</Typography>
+            <Toolbar variant="dense">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    Skins Scores
+                </Typography>
+                <Typography variant="subtitle">Hole #{totalSkins}</Typography>
             </Toolbar>
         </AppBar>
     )
