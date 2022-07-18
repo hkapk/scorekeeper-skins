@@ -11,36 +11,39 @@
   padding: 10px 10px;
 }
 
+.skin-count {
+  padding: 10px 10px;
+}
+
 .player-list .player-item {
-	position: relative;
-	padding: 10px 15px;
-	background-color: #FFF;
-	border-radius: 8px;
-	margin-bottom: 15px;
-	display: flex;
-	transition: 0.4s;
-	padding-left: 75px;
+  position: relative;
+  padding: 10px 15px;
+  background-color: #FFF;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  transition: 0.4s;
+  padding-left: 75px;
 }
 
 .player-list .player-item .remove-item {
-	position: flex;
-	width: 15;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	overflow: hidden;
+  position: flex;
+  width: 15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
 
-	cursor: pointer;
-	display: block;
-	color: var(--light);
-	font-weight: 600;
-	background-color: var(--alert);
-	border-radius: 8px 8px 8px 8px;
-	transition: 0.2s;
+  cursor: pointer;
+  display: block;
+  color: var(--light);
+  font-weight: 600;
+  background-color: var(--alert);
+  border-radius: 8px 8px 8px 8px;
+  transition: 0.2s;
 }
 
 .player-list .player-item:hover .remove-item {
-	width: 50px;
   background-color: red;
   color: white;
 }
@@ -71,6 +74,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

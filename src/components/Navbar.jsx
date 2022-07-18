@@ -8,7 +8,6 @@ function Navbar({ totalSkins }) {
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     Skins Scores
                 </Typography>
-                <Typography variant="subtitle">Hole #{totalSkins}</Typography>
             </Toolbar>
         </AppBar>
     )

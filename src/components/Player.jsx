@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "./Button";
 
 function Player({ name, index, removePlayer }) {
     const removeHandle = i => {

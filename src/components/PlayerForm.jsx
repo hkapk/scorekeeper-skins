@@ -22,7 +22,6 @@ function PlayerForm({ name, setName }) {
                     placeholder="Player Name..." ref={playerName} />
                 <input type='submit' value='+'></input>
             </div>
-
         </form>
     );
 
