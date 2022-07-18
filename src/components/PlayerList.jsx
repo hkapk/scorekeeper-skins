@@ -19,7 +19,9 @@ function PlayerList({ name, setName }) {
     };
 
     const reduceHole = () => {
-        setCount(count - 1);
+        if (count > 1) {
+            setCount(count - 1)
+        };
     };
 
     return (
