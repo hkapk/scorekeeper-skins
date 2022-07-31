@@ -15,36 +15,36 @@
   padding: 10px 10px;
 }
 
+.submitButton {
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+
+
 .player-list .player-item {
-  position: relative;
-  padding: 10px 15px;
-  background-color: #FFF;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  list-style: none;
   display: flex;
-  transition: 0.4s;
-  padding-left: 75px;
+  justify-content: left;
+  margin-left: 20%;
+  padding-top: 5px;
 }
 
 .player-list .player-item .remove-item {
-  position: flex;
-  width: 15;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-
-  cursor: pointer;
-  display: block;
-  color: var(--light);
-  font-weight: 600;
-  background-color: var(--alert);
-  border-radius: 8px 8px 8px 8px;
-  transition: 0.2s;
+  margin: 5px;
 }
 
 .player-list .player-item:hover .remove-item {
   background-color: red;
+  color: white;
+}
+
+.player-list .player-item .add-item {
+  margin: 5px;
+}
+
+.player-list .player-item:hover .add-item {
+  background-color: green;
   color: white;
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import Player from './Player';
+import Score from './Score';
 
-function PlayerList({ name, setName }) {
+function ScoreList({ name, setName }) {
 
     const removePlayer = i => {
         let temp = name.filter((v, index) => index !== i);
@@ -17,7 +17,7 @@ function PlayerList({ name, setName }) {
             <div className='player-list'>
                 {
                     name.sort(sortByDate).map((value, index) => (
-                        <Player
+                        <Score
                             key={index}
                             name={value}
                             index={index}
@@ -30,4 +30,4 @@ function PlayerList({ name, setName }) {
 
 }
 
-export default PlayerList;
+export default ScoreList;

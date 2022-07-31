@@ -1,32 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Player({ name, index, removePlayer }) {
     const removeHandle = i => {
         removePlayer(i);
     }
 
-    const [count, setCount] = useState(0);
-
-    const addSkin = () => {
-        setCount(count + 1);
-    };
-
-    const removeSkin = () => {
-        if (count > 0) {
-            setCount(count - 1)
-        };
-    };
 
     return (
-
-        <div className='player-item'>
-            <button className='remove-item' onClick={() => removeHandle(index)
+        <li className='player-item'>
+            <div className="player-item"><button className='remove-item' onClick={() => removeHandle(index)
             }> X </button>
-            <div className="player-item">{name.playerName} </div>
-            <button className="remove-item-skin" onClick={() => removeSkin()}>-</button>
-            <div className="skin-count">{count}</div>
-            <button className="add-item-skin" onClick={() => addSkin()}>+</button>
-        </div>
+                {name.playerName} </div>
+        </li>
     )
 }
 
