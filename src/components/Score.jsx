@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 import { CountContext, SkinContext } from './ScoreList';
 
+
+
 function Score({ name }) {
 
     // const { holeCount, setHoleCount } = useContext(CountContext);
@@ -14,12 +16,6 @@ function Score({ name }) {
         setSkinCount(skinCount - skinCount + 1);
         //advance holes 1
         setHoleCount(holeCount + 1);
-
-        console.log("HC- score", holeCount);
-        console.log("SC- score", skinCount);
-        console.log("PlayerSkins", playerSkinCount);
-
-
     };
 
 

@@ -8,7 +8,8 @@ import React, { useState } from 'react';
 
 function App() {
   const [name, setName] = useState([]);
-
+  // const [currentPage, setCurrentPage] = useState('PlayerForm');
+  
 
   return (
 <div className="App">

@@ -1,7 +1,9 @@
 import React, { useState, createContext } from 'react';
 import Score from './Score';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
+
 
 export const CountContext = createContext(1);
 export const SkinContext = createContext(1);
@@ -10,20 +12,20 @@ function ScoreList({ name }) {
 
     const [holeCount, setHoleCount] = useState(1);
     const [skinCount, setSkinCount] = useState(1);
+    //const { playerSkinCount, setPlayerSkinCount } = useContext(PlayerSkinContext);
 
     const pushHole = () => {
         setSkinCount(skinCount + 1);
         setHoleCount(holeCount + 1);
 
-        //console.log("HC- scoreList", holeCount);
-        //console.log("SC- scoreList", skinCount);
     };
 
     const reduceHole = () => {
-        if (holeCount > 1) {
+        if (holeCount > 1 && skinCount > 1) {
             setHoleCount(holeCount - 1);
             setSkinCount(skinCount - 1);
             //return player skin count
+            // setPlayerSkinCount(playerSkinCount - 1);
         };
     }
 
@@ -33,15 +35,16 @@ function ScoreList({ name }) {
 
     return (
         <CountContext.Provider value={{ holeCount, setHoleCount }}>
-            <h1>Keep Score!</h1>
             <div><div className='score-title'>
                 <button className="previous-hole" onClick={() => reduceHole()}>            <FontAwesomeIcon icon={faArrowLeft} /></button>
-                Hole {holeCount}
+                Hole #{holeCount}
             </div>
                 <SkinContext.Provider value={{ skinCount, setSkinCount }}>
                     <div className='score-title-2'>
-                        Skins {skinCount}
-                        <button className="push" onClick={() => pushHole()}>    <FontAwesomeIcon icon={faArrowRight} /></button>
+                        Skins Available:  {skinCount}
+                        <div><button className="push" onClick={() => pushHole()}>
+                            Push Hole </button>
+                        </div>
                     </div>
                     <li className='player-item'>
                         {

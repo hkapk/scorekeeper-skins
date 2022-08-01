@@ -19,15 +19,15 @@ function PlayerForm({ name, setName }) {
     return (
         <form className='player-form' onSubmit={addPlayer}>
             <h1> Add Players </h1>
-            <div className='form-inner'>
-                <input type='text' name="playerName" id="playerName"
+            <div>
+                <input className='submitButton' type='text' name="playerName" id="playerName"
                     placeholder="Player Name..." ref={playerName} />
-                <input type='submit' value='+'></input>
+                <input className='submitButton' type='submit' value='+'></input>
                 <div>
                     <PlayerList name={name} setName={setName} />
                 </div>
-                <div>
-                    <button className='submitButton'> Play </button>
+                <div className='submitButton'>
+                    <button className='submitButton'> Continue </button>
                 </div>
             </div>
         </form>
