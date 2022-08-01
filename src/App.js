@@ -12,8 +12,8 @@ function App() {
 
   return (
 <div className="App">
-  <button onClick={()=> setIsToggled(!isToggled)}>Toggle</button>
   { isToggled ?   <PlayerForm name={name} setName={setName}/> : <ScoreList name={name} setName={setName}/> }
+  <button className="submitButton" onClick={()=> setIsToggled(!isToggled)}>Start</button>
 </div>
   );
 }

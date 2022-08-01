@@ -4,7 +4,6 @@ import PlayerList from "./PlayerList";
 function PlayerForm({ name, setName }) {
 
     const playerName = useRef(null);
-    const [isToggled, setIsToggled] = useState(true);
 
     const addPlayer = e => {
         e.preventDefault();
@@ -26,9 +25,6 @@ function PlayerForm({ name, setName }) {
                 <input className='submitButton' type='submit' value='+'></input>
                 <div>
                     <PlayerList name={name} setName={setName} />
-                </div>
-                <div className='submitButton'>
-                    {/* <button className='submitButton'> Continue </button> */}
                 </div>
             </div>
         </form>
