@@ -10,8 +10,11 @@ function Score({ name }) {
 
     const addSkin = () => {
         setPlayerSkinCount(playerSkinCount + skinCount);
-        //setHoleCount(holeCount + 1);
-        //setSkinCount(skinCount - skinCount + 1);
+        //reset skin count to 1
+
+        //advance holes 1
+
+
         console.log("HC- score", holeCount);
         console.log("SC- score", skinCount);
     };
@@ -19,8 +22,8 @@ function Score({ name }) {
 
     return (
         <div className="player-item">
-            {name.playerName} {playerSkinCount} <button className='' onClick={() => addSkin()
-            }> Winner! </button></div>
+            {name.playerName} {playerSkinCount} <button className='add-skin' onClick={() => addSkin()
+            }> + </button></div>
     )
 }
 
