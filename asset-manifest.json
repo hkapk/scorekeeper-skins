@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/scorekeeper-skins/static/css/main.23f6d0e8.chunk.css",
-    "main.js": "/scorekeeper-skins/static/js/main.0a570c19.chunk.js",
-    "main.js.map": "/scorekeeper-skins/static/js/main.0a570c19.chunk.js.map",
+    "main.css": "/scorekeeper-skins/static/css/main.698ad2e7.chunk.css",
+    "main.js": "/scorekeeper-skins/static/js/main.dfc75027.chunk.js",
+    "main.js.map": "/scorekeeper-skins/static/js/main.dfc75027.chunk.js.map",
     "runtime-main.js": "/scorekeeper-skins/static/js/runtime-main.00d05062.js",
     "runtime-main.js.map": "/scorekeeper-skins/static/js/runtime-main.00d05062.js.map",
-    "static/js/2.f5e10025.chunk.js": "/scorekeeper-skins/static/js/2.f5e10025.chunk.js",
-    "static/js/2.f5e10025.chunk.js.map": "/scorekeeper-skins/static/js/2.f5e10025.chunk.js.map",
+    "static/js/2.f32b4586.chunk.js": "/scorekeeper-skins/static/js/2.f32b4586.chunk.js",
+    "static/js/2.f32b4586.chunk.js.map": "/scorekeeper-skins/static/js/2.f32b4586.chunk.js.map",
     "static/js/3.0bd90d9e.chunk.js": "/scorekeeper-skins/static/js/3.0bd90d9e.chunk.js",
     "static/js/3.0bd90d9e.chunk.js.map": "/scorekeeper-skins/static/js/3.0bd90d9e.chunk.js.map",
     "index.html": "/scorekeeper-skins/index.html",
-    "static/css/main.23f6d0e8.chunk.css.map": "/scorekeeper-skins/static/css/main.23f6d0e8.chunk.css.map",
-    "static/js/2.f5e10025.chunk.js.LICENSE.txt": "/scorekeeper-skins/static/js/2.f5e10025.chunk.js.LICENSE.txt"
+    "static/css/main.698ad2e7.chunk.css.map": "/scorekeeper-skins/static/css/main.698ad2e7.chunk.css.map",
+    "static/js/2.f32b4586.chunk.js.LICENSE.txt": "/scorekeeper-skins/static/js/2.f32b4586.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.00d05062.js",
-    "static/js/2.f5e10025.chunk.js",
-    "static/css/main.23f6d0e8.chunk.css",
-    "static/js/main.0a570c19.chunk.js"
+    "static/js/2.f32b4586.chunk.js",
+    "static/css/main.698ad2e7.chunk.css",
+    "static/js/main.dfc75027.chunk.js"
   ]
 }
