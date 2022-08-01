@@ -3,6 +3,7 @@ import Score from './Score';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
+export const CountContext = createContext(1);
 
 function ScoreList({ name }) {
 
@@ -34,7 +35,7 @@ function ScoreList({ name }) {
     }
 
     return (
-        <div>
+        <CountContext.Provider value={holeCount}>
             <h1>Keep Score!</h1>
             <div className=''>
                 <button className="previous-hole" onClick={() => reduceHole()}>            <FontAwesomeIcon icon={faArrowLeft} /></button>
@@ -47,8 +48,6 @@ function ScoreList({ name }) {
                     {
                         name.sort(sortByDate).map((value, index) => (
                             <Score
-                                holeCount={holeCount}
-                                skinCount={skinCount}
                                 key={index}
                                 name={value}
                                 index={index}
@@ -57,7 +56,7 @@ function ScoreList({ name }) {
                     }
                 </li>
             </div>
-        </div>
+        </CountContext.Provider >
     );
 
 }
