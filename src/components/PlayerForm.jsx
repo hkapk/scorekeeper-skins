@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import PlayerList from "./PlayerList";
 
 function PlayerForm({ name, setName }) {
 
     const playerName = useRef(null);
+    const [isToggled, setIsToggled] = useState(true);
 
     const addPlayer = e => {
         e.preventDefault();
@@ -27,7 +28,7 @@ function PlayerForm({ name, setName }) {
                     <PlayerList name={name} setName={setName} />
                 </div>
                 <div className='submitButton'>
-                    <button className='submitButton'> Continue </button>
+                    {/* <button className='submitButton'> Continue </button> */}
                 </div>
             </div>
         </form>
