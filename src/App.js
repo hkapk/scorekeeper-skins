@@ -10,10 +10,13 @@ function App() {
   // const [currentPage, setCurrentPage] = useState('PlayerForm');
   const [isToggled, setIsToggled] = useState(true);
 
+
+
   return (
 <div className="App">
   { isToggled ?   <PlayerForm name={name} setName={setName}/> : <ScoreList name={name} setName={setName}/> }
-  <button className="submitButton" onClick={()=> setIsToggled(!isToggled)}>Start</button>
+  
+  { isToggled ? <button className="submitButton" onClick={()=> setIsToggled(!isToggled)}>Start</button>  : <><button className="submitButton" onClick={()=> setIsToggled(!isToggled)}>New Game</button> </> }
 </div>
   );
 }
