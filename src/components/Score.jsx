@@ -1,55 +1,25 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useContext } from "react";
+import { CountContext } from './ScoreList';
 
-function Score({ name, index }) {
+function Score({ name, holeCount, skinCount }) {
 
-    const [holeCount, setHoleCount] = useState(1);
+
     const [playerSkinCount, setPlayerSkinCount] = useState(0);
-    const [skinCount, setSkinCount] = useState(1);
-
-    const pushHole = () => {
-        setSkinCount(skinCount + 1);
-        setHoleCount(holeCount + 1);
-    };
-
-    const reduceHole = () => {
-        if (holeCount > 1) {
-            setHoleCount(holeCount - 1);
-            setSkinCount(skinCount - 1);
-            //return player skin count
-        };
-    }
+    // let [skinCount, setSkinCount] = useState(1);
 
     const addSkin = () => {
         setPlayerSkinCount(playerSkinCount + skinCount);
-        setHoleCount(holeCount + 1);
-        setSkinCount(skinCount - skinCount + 1);
-    };
 
-    const removeSkin = () => {
-        if (playerSkinCount > 0) {
-            setPlayerSkinCount(playerSkinCount - 1)
-        };
+        //setSkinCount(skinCount - skinCount + 1);
+        console.log("HC- score", holeCount);
+        console.log("SC- score", skinCount);
     };
 
 
     return (
-        <div>
-            <h1> Keep Score</h1>
-            <button className="previous-hole" onClick={() => reduceHole()}>            <FontAwesomeIcon icon={faArrowLeft} /></button>
-            Hole {holeCount}
-            <div>
-                Skins {skinCount}
-            </div>
-            <button className="push" onClick={() => pushHole()}>push</button>
-            <div className='player-item'>
-                <div className="player-item">{name.playerName} </div>
-                <button className="remove-item" onClick={() => removeSkin()}>-</button>
-                <div className="skin-count">{playerSkinCount}</div>
-                <button className="add-item" onClick={() => addSkin()}>Winner</button>
-            </div>
-        </div>
+        <div className="player-item">
+            {name.playerName} {playerSkinCount} <button className='' onClick={() => addSkin()
+            }> Winner! </button></div>
     )
 }
 

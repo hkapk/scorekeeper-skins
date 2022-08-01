@@ -20,7 +20,9 @@
   padding: 10px;
 }
 
-
+.player-item {
+  list-style: none;
+}
 
 .player-list .player-item {
   list-style: none;
