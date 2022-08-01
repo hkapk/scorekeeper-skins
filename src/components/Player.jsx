@@ -13,7 +13,7 @@ function Player({ name, index, removePlayer }) {
         <li className='player-item'>
             <div className=""><button className='remove-item' onClick={() => removeHandle(index)
             }> <FontAwesomeIcon icon={faTrash} /> </button>
-                {name.playerName} </div>
+                {name.playerName}  </div>
         </li>
     )
 }

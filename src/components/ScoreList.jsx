@@ -1,9 +1,8 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import Score from './Score';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-
-
+import { PageContext } from '../App';
 
 export const CountContext = createContext(1);
 export const SkinContext = createContext(1);
@@ -13,6 +12,8 @@ function ScoreList({ name }) {
     const [holeCount, setHoleCount] = useState(1);
     const [skinCount, setSkinCount] = useState(1);
     //const { playerSkinCount, setPlayerSkinCount } = useContext(PlayerSkinContext);
+    const { isToggled, setIsToggled } = useContext(PageContext);
+
 
     const pushHole = () => {
         setSkinCount(skinCount + 1);
@@ -21,6 +22,9 @@ function ScoreList({ name }) {
     };
 
     const reduceHole = () => {
+        if (holeCount === 1) {
+            setIsToggled(true)
+        }
         if (holeCount > 1 && skinCount > 1) {
             setHoleCount(holeCount - 1);
             setSkinCount(skinCount - 1);
