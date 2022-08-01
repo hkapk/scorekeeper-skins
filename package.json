@@ -2,6 +2,7 @@
   "name": "scorekeeper-skins",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://hkapk.github.io/scorekeeper-skins",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
