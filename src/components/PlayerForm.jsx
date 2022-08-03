@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import PlayerList from "./PlayerList";
 
 function PlayerForm({ name, setName }) {
 
     const playerName = useRef(null);
+
 
     const addPlayer = e => {
         e.preventDefault();
@@ -20,8 +21,12 @@ function PlayerForm({ name, setName }) {
         <form className='player-form' onSubmit={addPlayer}>
             <h1> Add Players </h1>
             <div>
-                <input className='submitButton' type='text' name="playerName" id="playerName"
-                    placeholder="Player Name..." ref={playerName} />
+                <input className='submitButton'
+                    type='text'
+                    name="playerName"
+                    id="playerName"
+                    placeholder="Player Name..."
+                    ref={playerName} />
                 <input className='submitButton' type='submit' value='+'></input>
                 <div>
                     <PlayerList name={name} setName={setName} />

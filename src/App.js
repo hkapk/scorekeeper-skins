@@ -2,6 +2,7 @@ import './App.css';
 import PlayerForm from './components/PlayerForm';
 import ScoreList from './components/ScoreList';
 import React, { useState , createContext } from 'react';
+import Navbar from './components/Navbar'
 
 export const PageContext = createContext(true);
 
@@ -12,6 +13,7 @@ function App() {
 
   return (
 <div className="App">
+  <Navbar/>
 <PageContext.Provider value={{ isToggled, setIsToggled}}>
   { isToggled ?   <PlayerForm name={name} setName={setName}/> : <ScoreList name={name} setName={setName}/> }
   

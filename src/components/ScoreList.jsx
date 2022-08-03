@@ -45,7 +45,7 @@ function ScoreList({ name }) {
             </div>
                 <SkinContext.Provider value={{ skinCount, setSkinCount }}>
                     <div className='score-title-2'>
-                        Skins Available:  {skinCount}
+                        <p className='skinCountOne'>Skins Available: </p> <p className="skinCount">{skinCount}</p>
                         <div><button className="push" onClick={() => pushHole()}>
                             Push Hole </button>
                         </div>

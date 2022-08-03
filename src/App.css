@@ -1,18 +1,21 @@
 .App {
   text-align: center;
   height: 100%;
+  width: 100%;
+}
+
+.NavBar {
+  padding: 20px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-weight: 700;
+  background-color: #282c34;
 }
 
 
 .player-form {
   padding: 10px 10px;
   font-family: 'Courier New', Courier, monospace;
-}
-
-
-
-.skin-count {
-  padding: 10px 10px;
 }
 
 .submitButton {
@@ -53,6 +56,23 @@
   font-size: larger;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
+}
+
+.score-title-2 p {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.skinCount {
+  color: white;
+  border-radius: 20px;
+  width: 20px;
+  padding: 10px 10px;
+  background-color: #282c34;
+}
+
+.skinCountOne {
+  padding: 10px 10px;
 }
 
 .previous-hole {
